@@ -1,0 +1,61 @@
+[
+	{
+		"type": "textInput",
+		"label": "Driver Name",
+		"path": "driver.name",
+		"required": true,
+		"helperText": "Driver Name is requiredsss",
+		"defaultValue": "Peter"
+	},
+	{
+		"type": "textInput",
+		"label": "Driver Surnname",
+		"path": "driver.surname",
+		"defaultValue": "Smith"
+	},
+	{
+		"type": "textInput",
+		"label": "Vehicle Regplate",
+		"path": "vehicle.regplate"
+	},
+	{
+		"type": "enumInput",
+		"label": "Vehicle Type",
+		"path": "vehicle.type",
+		"required": true,
+		"values": ["Car", "Van", "Motorbike"],
+		"defaultValue": "Motorbike",
+		"helperText": "Vehicle Type is requiredsss"
+	},
+	{
+		"type": "textInput",
+		"label": "Driving License Number",
+		"path": "driver.license",
+		"helperText": "Driving License Number is requiredsss",
+		"displayIf": {
+			"operator": "AND",
+			"conditions": [
+				{ "path": "driver.age", "operator": "greaterThan", "value": 17 },
+				{ "path": "vehicle.type", "operator": "not", "value": "Motorbike" }
+			]
+		}
+	},
+	{
+		"type": "integerInput",
+		"label": "Driver Age",
+		"path": "driver.age",
+		"min": 0,
+		"max": 130,
+		"defaultValue": 30
+	},
+	{
+		"type": "currencyInput",
+		"label": "Vehicle Trade Value",
+		"currencyLabel": "Vehicle Trade Currency",
+		"path": "vehicle.tradeValue",
+		"min": 0,
+		"max": 10000000,
+		"required": true,
+		"currencies": ["EUR", "USD", "GBP"]
+	}
+]

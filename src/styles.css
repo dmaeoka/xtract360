@@ -1,0 +1,16 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.App {
+	font-family: sans-serif;
+	background: #efefef;
+	min-height: 100vh;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	align-items: center;
+}
