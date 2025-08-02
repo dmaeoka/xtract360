@@ -59,16 +59,26 @@ Tests are written with:
 .
 ├── src/
 │   ├── components/
-│   │   ├── StaticForm.tsx      # Main form component
+│   │   ├── App.tsx             # Entry component
+│   │   ├── Base.tsx            # Layout component
 │   │   ├── DynamicField.tsx    # Reusable dynamic field renderer
-│   ├── utils/
-│   │   ├── index.ts            # setDeep, getDeep, isEmpty, getData, etc.
+│   │   ├── NotFound.tsx        # Not fount page
+│   │   ├── StaticForm.tsx      # Main form component
+│   │   ├── Submit.tsx          # Submit page
+│   ├── data/
+│   │   ├── configurationToImplement.json
+│   │   ├── object.json
 │   ├── tests/
 │   │   ├── utils.test.ts
 │   │   ├── DynamicField.test.tsx
 │   │   └── StaticForm.test.tsx
-│   ├── AppRoutes.tsx
+│   ├── types/
+│   │   ├── index.ts
+│   ├── utils/
+│   │   ├── index.ts
+│   ├── routes.tsx
 │   ├── index.tsx
+│   ├── styles.css
 ├── jest.config.js
 ├── jest.setup.ts
 └── README.md
