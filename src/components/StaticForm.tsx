@@ -23,14 +23,13 @@ const StaticForm = ({ data = { } }: StaticFormProps): JSX.Element => {
 
 	const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		setHasSubmitted(true); // ✅ mark that we attempted submission
-
+		setHasSubmitted(true);
 		const missingRequired = config.filter(
 			(field) => field.required && isEmpty(getDeep(myObject, field.path))
 		);
 
 		if (missingRequired.length > 0) {
-			console.log("❌ Missing required fields:", missingRequired.map(f => f.label || f.path));
+			console.log("Missing required fields:", missingRequired.map(f => f.label || f.path));
 			setAlertMessage("Please fill out all required fields before submitting.");
 			return;
 		}
